@@ -1,35 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Profile card component</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./app/css/reset.css" />
+    <link rel="stylesheet" href="./app/css/style.css" />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-  Victor Crest
-  26
-  London
+    <title>Frontend Mentor | Profile card component</title>
+  </head>
+  <body>
+    <!-- CARD -->
+    <main class="card">
+      <!-- TOP SECTION (Background) -->
+      <section class="card__background"></section>
 
-  80K
-  Followers
+      <!-- MIDDLE SECTION (Profile Info) -->
+      <secion class="card__profile">
+        <img
+          src="./images/image-victor.jpg"
+          alt="profile picture"
+          class="card__profile-pic"
+        />
+        <h1 class="card__profile-name">
+          Victor Crest <span class="card__profile-age">26</span>
+        </h1>
+        <p class="card__profile-location">London</p>
+      </secion>
 
-  803K
-  Likes
+      <!-- BOTTOM SECTION (Statistics) -->
+      <section class="card__stats card__stats--flex">
+        <div class="card__stats-followers">
+          <h2 class="card__stats--value">80K</h2>
+          <p class="card__stats--description">Followers</p>
+        </div>
+        <div class="card__stats-likes">
+          <h2 class="card__stats--value">803K</h2>
+          <p class="card__stats--description">Likes</p>
+        </div>
+        <div class="card__stats-photos">
+          <h2 class="card__stats--value">1.4K</h2>
+          <p class="card__stats--description">Photos</p>
+        </div>
+      </section>
+    </main>
 
-  1.4K
-  Photos
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <!-- ATTRIBUTION -->
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Piotr Szponder</a>.
+    </div>
+  </body>
 </html>
