@@ -1,10 +1,150 @@
 /* =========== */
-/* Attribution */
+/* ATTRIBUTION */
 /* =========== */
 .attribution {
   font-size: 11px;
   text-align: center;
+  margin-top: 5rem;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+/* ==================== */
+/* FONT AND FONT FAMILY */
+/* ==================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+body {
+  font-size: 1.8rem;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+h1,
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-blue-dark);
+}
+
+p,
+span {
+  font-weight: 400;
+  color: var(--color-blue-gray);
+}
+
+p {
+  font-size: 1.3rem;
+}
+
+/* ====== */
+/* COLORS */
+/* ====== */
+:root {
+  /* Dark Cyan */
+  --color-cyan: hsl(185, 75%, 39%);
+
+  /* Very Dark Desaturated Blue */
+  --color-blue-dark: hsl(229, 23%, 23%);
+
+  /* Dark Grayish Blue */
+  --color-blue-gray: hsl(227, 10%, 46%);
+
+  /* Dark Gray */
+  --color-gray: hsl(0, 0%, 59%);
+}
+
+/* ==== */
+/* body */
+/* ==== */
+body {
+  background-color: var(--color-cyan);
+
+  background-image: url(../../images/bg-pattern-top.svg),
+    url(../../images/bg-pattern-bottom.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: -75rem -70rem, 25rem 25rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ==== */
+/* CARD */
+/* ==== */
+.card {
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 1.5rem;
+  /* Hide content which overflows the corners of the card to preserve the */
+  overflow: hidden;
+  width: 40rem;
+  height: 45rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.card__header,
+.card__profile,
+.card__stats {
+  flex: 1;
+}
+
+/* ======== */
+/* CARD TOP */
+/* ======== */
+.card__header {
+  background-image: url(../../images/bg-pattern-card.svg);
+}
+
+/* =========== */
+/* CARD MIDDLE */
+/* =========== */
+.card__profile {
+  /* Make container flexbox */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border-bottom: 0.1rem solid #e8e8e8;
+}
+
+.card__profile-pic {
+  border: 0.6rem solid white;
+  border-radius: 50%;
+  margin-top: -8rem;
+}
+
+.card__profile-name {
+  margin: 3rem 0 1.8rem;
+}
+
+.card__profile-location {
+  font-size: 1.6rem;
+}
+
+/* =========== */
+/* CARD BOTTOM */
+/* =========== */
+.card__stats {
+  flex-grow: 0.6;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.card__stats-followers,
+.card__stats-likes,
+.card__stats-photos {
+  text-align: center;
+}
+
+.card__stats--value {
+  margin-bottom: 1rem;
 }
