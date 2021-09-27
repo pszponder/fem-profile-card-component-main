@@ -27,8 +27,8 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://pszponder.github.io/fem-profile-card-component-main/)
+- Solution URL: [Solution on Frontend Mentor](https://www.frontendmentor.io/solutions/responsive-profile-card-using-html-css-and-flexbox-0AiuHN3aY)
+- Live Site URL: [GitHub Page to Solution](https://pszponder.github.io/fem-profile-card-component-main/)
 
 ## My process
 
