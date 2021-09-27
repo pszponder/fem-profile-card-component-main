@@ -59,13 +59,15 @@ p {
 /* body */
 /* ==== */
 body {
+  /* Color */
   background-color: var(--color-cyan);
 
-  background-image: url(../../images/bg-pattern-top.svg),
-    url(../../images/bg-pattern-bottom.svg);
-  background-repeat: no-repeat, no-repeat;
-  background-position: -75rem -70rem, 25rem 25rem;
+  /* Image */
+  /* background-image: url(../../images/bg-pattern-top.svg); */
+  /* background-repeat: no-repeat; */
+  /* background-position: top -40rem left -10rem; */
 
+  /* Flex Container */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -92,6 +94,35 @@ body {
 .card__profile,
 .card__stats {
   flex: 1;
+}
+
+/* Set .app-wrapper to position relative */
+/* This will allow pseudo-elements on the .card to have their position based on the .app-wrapper, not the body */
+/* This technically causes the pseudo elements to overflow but this is ok */
+.app-wrapper {
+  position: relative;
+}
+
+/* =============== */
+/* CARD BACKGROUND */
+/* =============== */
+
+.card::before {
+  content: url(../../images/bg-pattern-top.svg);
+  position: absolute;
+  z-index: -1;
+  top: -75rem;
+  left: -75rem;
+  transition: 1s;
+}
+
+.card::after {
+  content: url(../../images/bg-pattern-bottom.svg);
+  position: absolute;
+  z-index: -1;
+  top: 20rem;
+  left: 15rem;
+  transition: 1s;
 }
 
 /* ======== */
@@ -154,3 +185,19 @@ body {
 .card__stats--value {
   margin-bottom: 1rem;
 }
+
+/* Media Queries */
+/* 144em / 1.8rem = 80em */
+@media (min-width: 80em) {
+  .card::before {
+    transition: 1s;
+    top: -63rem;
+    left: -83rem;
+  }
+
+  .card::after {
+    transition: 1s;
+    top: 25rem;
+    left: 20rem;
+  }
+} ;
