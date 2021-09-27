@@ -67,6 +67,9 @@ body {
   /* background-repeat: no-repeat; */
   /* background-position: top -40rem left -10rem; */
 
+  /* Prevent pseudo-elements from creating scrollbars on screen*/
+  overflow: hidden;
+
   /* Flex Container */
   display: flex;
   flex-direction: column;
